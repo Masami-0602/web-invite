@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
 interface CountDownToDateProps {
@@ -78,27 +79,27 @@ export const CountDownToDate = ({targetDate}: CountDownToDateProps) => {
 
   return (
     
-    <div
+    <Box
       style={{
         display: "flex",
         columnGap: "16px"
       }}>
-      <div style={{ fontSize: "36px"}}>
-        <span>{timeLeft.days}<br/></span>
-        <span style={{ fontSize: "12px"}}>DAYS</span>
-      </div>
-      <div style={{ fontSize: "36px"}}>
+      <Box style={{ fontSize: "36px"}}>
+        <Typography>{timeLeft.days}<br/></Typography>
+        <Typography style={{ fontSize: "12px"}}>DAYS</Typography>
+      </Box>
+      <Box style={{ fontSize: "36px"}}>
         {timeLeft.hours}<br/>
-        <span style={{ fontSize: "12px"}}>HOURS</span>
-      </div>
-      <div style={{ fontSize: "36px"}}>
+        <Typography style={{ fontSize: "12px"}}>HOURS</Typography>
+      </Box>
+      <Box style={{ fontSize: "36px"}}>
         {timeLeft.minutes}<br/>
-        <span style={{ fontSize: "12px"}}>MINUTES</span>
-      </div>
-      <div style={{ fontSize: "36px"}}>
+        <Typography style={{ fontSize: "12px"}}>MINUTES</Typography>
+      </Box>
+      <Box style={{ fontSize: "36px"}}>
         {timeLeft.seconds}<br/>
-        <span style={{ fontSize: "12px"}}>SECONDS</span>
-      </div>
-    </div>
+        <Typography style={{ fontSize: "12px"}}>SECONDS</Typography>
+      </Box>
+    </Box>
   )
 }
