@@ -1,13 +1,17 @@
-import { Box, Button, Typography } from "@mui/material";
-import { CountDownToDate } from "./timer";
+import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import { useCountDown } from "../hooks/useCountDown";
 
 /* 左側のコンテンツ */
 export function LeftContents() {
+  const { days, hours, minutes, seconds } = useCountDown({
+    targetDate: "2025-12-30T10:00:00",
+  });
+
   return (
     <Box sx={{ paddingRight: "118px" }}>
       {/* 左側の名前と式の日付部 */}
       <Box sx={{ border: "1px solid #000000", padding: "45px 20px" }}>
-        <Box sx={{ borderBottom: "1px solid #000000" }}>
+        <Box>
           <Typography
             sx={{ fontSize: "26px", margin: "0 0 12px 0", color: "black" }}
           >
@@ -34,13 +38,26 @@ export function LeftContents() {
             Sunday 10:00AM
           </Typography>
         </Box>
+        <Divider />
         {/* 式までの日付カウント部 */}
-        <Box>
-          <CountDownToDate
-            targetDate="2025-12-30T10:00:00"
-            units={["days", "hours", "minutes", "seconds"]}
-          />
-        </Box>
+        <Stack direction="row" sx={{ display: "flex", gap: "8px", pt: "24px" }}>
+          <Box sx={{ flex: 1 }}>
+            <Typography sx={{ fontSize: "36px" }}>{days}</Typography>
+            <Typography variant="XXS">DAYS</Typography>
+          </Box>
+          <Box sx={{ flex: 1 }}>
+            <Typography sx={{ fontSize: "36px" }}>{hours}</Typography>
+            <Typography variant="XXS">HOURS</Typography>
+          </Box>
+          <Box sx={{ flex: 1 }}>
+            <Typography sx={{ fontSize: "36px" }}>{minutes}</Typography>
+            <Typography variant="XXS">MINUTES</Typography>
+          </Box>
+          <Box sx={{ flex: 1 }}>
+            <Typography sx={{ fontSize: "36px" }}>{seconds}</Typography>
+            <Typography variant="XXS">SECONDS</Typography>
+          </Box>
+        </Stack>
       </Box>
 
       {/* 左下のご案内部 */}

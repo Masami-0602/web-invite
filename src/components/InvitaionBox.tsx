@@ -5,12 +5,14 @@ import type React from "react";
 export type InvitationBoxProps = {
   boxTitle: string;
   disableHyphen?: boolean;
+  disableBorder?: boolean;
   children: React.ReactNode;
 };
 
 export function InvitaionBox({
   boxTitle,
   disableHyphen = false,
+  disableBorder = false,
   children,
 }: InvitationBoxProps) {
   const { palette } = useTheme();
@@ -23,7 +25,15 @@ export function InvitaionBox({
   };
 
   return (
-    <Box sx={{ border: `1px solid ${palette.text.primary}`, mx: "20px" }}>
+    <Box
+      sx={{
+        border: disableBorder ? {} : `1px solid ${palette.text.primary}`,
+        // mx: "20px",
+        // maxWidth: "calc(100% - 16px)",
+        width: "100%",
+        boxSizing: "border-box",
+      }}
+    >
       <Box sx={{ padding: "16px 20px 24px" }}>
         <Typography
           variant="invitationTitle"
