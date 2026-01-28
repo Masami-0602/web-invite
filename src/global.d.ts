@@ -1,6 +1,6 @@
-import "@mui/material/styles";
+import '@mui/material/styles';
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface TypographyVariants {
     weddingTitle: React.CSSProperties;
     operetta18: React.CSSProperties;
@@ -28,7 +28,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-declare module "@mui/material/Typography" {
+declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     weddingTitle: true;
     operetta18: true;

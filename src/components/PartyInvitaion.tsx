@@ -1,5 +1,5 @@
-import { Box, Typography, Stack, useTheme } from "@mui/material";
-import { InvitaionBox } from "./InvitaionBox";
+import { Box, Typography, Stack, useTheme } from '@mui/material';
+import { InvitaionBox } from './InvitaionBox';
 
 export function PartyInvitaion() {
   const { palette } = useTheme();
@@ -8,62 +8,62 @@ export function PartyInvitaion() {
     <Box
       sx={{
         backgroundColor: palette.secondary.light,
-        width: "100%",
-        height: "auto",
-        py: "40px",
-        px: "20px"
+        width: '100%',
+        height: 'auto',
+        py: '40px',
+        px: '20px',
       }}
     >
       <Typography variant="weddingTitle">Party Information</Typography>
-      <Typography sx={{ fontSize: "14px" }}>パーティのご案内</Typography>
+      <Typography sx={{ fontSize: '14px' }}>パーティのご案内</Typography>
       <Box>
         <Typography>開催日</Typography>
         <Typography>2025年6月22日 日曜日</Typography>
       </Box>
-      <Stack sx={{ gap: "14px" }}>
+      <Stack sx={{ gap: '14px' }}>
         <InvitaionBox boxTitle="挙式">
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "8px",
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '8px',
             }}
           >
-            <Typography variant="S" sx={{ display: "flex" }}>
+            <Typography variant="S" sx={{ display: 'flex' }}>
               開始時刻
             </Typography>
-            <Typography variant="XL" sx={{ display: "flex" }}>
+            <Typography variant="XL" sx={{ display: 'flex' }}>
               10:00
             </Typography>
           </Box>
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "4px",
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '4px',
             }}
           >
-            <Typography variant="S" sx={{ display: "flex" }}>
+            <Typography variant="S" sx={{ display: 'flex' }}>
               受付
             </Typography>
-            <Typography sx={{ display: "flex" }}>9:15</Typography>
+            <Typography sx={{ display: 'flex' }}>9:15</Typography>
           </Box>
         </InvitaionBox>
         <InvitaionBox boxTitle="披露宴">
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "8px",
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '8px',
             }}
           >
-            <Typography variant="S" sx={{ display: "flex" }}>
+            <Typography variant="S" sx={{ display: 'flex' }}>
               開始時刻
             </Typography>
-            <Typography variant="XL" sx={{ display: "flex" }}>
+            <Typography variant="XL" sx={{ display: 'flex' }}>
               11:00
             </Typography>
           </Box>
@@ -80,9 +80,9 @@ export function PartyInvitaion() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d12968.63389738174!2d139.699289!3d35.648467!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO95riL6LC35Yy654y_5qW955S6MjktMyDjg6rjgrnjg4jjg6njg7Pjg4ZBU08!5e0!3m2!1sja!2sus!4v1761971482659!5m2!1sja!2sus"
               style={{
-                width: "278px",
-                height: "210px",
-                border: "none",
+                width: '278px',
+                height: '210px',
+                border: 'none',
               }}
               allowFullScreen={true}
               loading="lazy"

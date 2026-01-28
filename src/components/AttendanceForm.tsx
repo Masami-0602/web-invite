@@ -1,4 +1,4 @@
-import { Search, Add } from "@mui/icons-material";
+import { Search, Add } from '@mui/icons-material';
 import {
   Box,
   Typography,
@@ -16,10 +16,10 @@ import {
   Button,
   useTheme,
   IconButton,
-} from "@mui/material";
-import { InvitaionBox } from "./InvitaionBox";
-import { useState, type ChangeEvent } from "react";
-import attend from "../assets/attend.png";
+} from '@mui/material';
+import { InvitaionBox } from './InvitaionBox';
+import { useState, type ChangeEvent } from 'react';
+import attend from '../assets/attend.png';
 
 export function AttendanceForm() {
   const { palette } = useTheme();
@@ -27,27 +27,23 @@ export function AttendanceForm() {
   const [selected, setSelected] = useState<string | null>(null);
 
   const options = [
-    { label: "ご出席", value: "Attend" },
-    { label: "ご欠席", value: "Decline" },
-    { label: "保留", value: "Hold" },
+    { label: 'ご出席', value: 'Attend' },
+    { label: 'ご欠席', value: 'Decline' },
+    { label: '保留', value: 'Hold' },
   ];
 
-  const [attendCelemonyValue, setAttendCelemonyValue] = useState("");
-  const [attendReceptionValue, setAttendReceptionValue] = useState("");
-  const [guestValue, setGuestValue] = useState("");
-  const [allergyValue, setAllergyValue] = useState("");
-  const [celebrateValue, setCelebrateValue] = useState("");
-  const [rideBusValue, setRideBusValue] = useState("");
+  const [attendCelemonyValue, setAttendCelemonyValue] = useState('');
+  const [attendReceptionValue, setAttendReceptionValue] = useState('');
+  const [guestValue, setGuestValue] = useState('');
+  const [allergyValue, setAllergyValue] = useState('');
+  const [celebrateValue, setCelebrateValue] = useState('');
+  const [rideBusValue, setRideBusValue] = useState('');
 
-  const handleChangeAttendCelemonyValue = (
-    e: ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleChangeAttendCelemonyValue = (e: ChangeEvent<HTMLInputElement>) => {
     setAttendCelemonyValue(e.currentTarget.value);
   };
 
-  const handleChangeAttendReceptionValue = (
-    e: ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleChangeAttendReceptionValue = (e: ChangeEvent<HTMLInputElement>) => {
     setAttendReceptionValue(e.currentTarget.value);
   };
 
@@ -71,25 +67,25 @@ export function AttendanceForm() {
     <Box
       sx={{
         backgroundColor: palette.secondary.dark,
-        width: "100%",
-        height: "auto",
-        padding: "56px 20px 20px",
+        width: '100%',
+        height: 'auto',
+        padding: '56px 20px 20px',
       }}
     >
       <Typography variant="weddingTitle" sx={{ color: palette.primary.light }}>
         Attendance form
       </Typography>
-      <Typography sx={{ fontSize: "14px", color: palette.primary.light }}>
+      <Typography sx={{ fontSize: '14px', color: palette.primary.light }}>
         御出欠について
       </Typography>
       <Box
         sx={{
-          marginTop: "20px",
+          marginTop: '20px',
         }}
       >
         <Typography
           sx={{
-            fontSize: "14px",
+            fontSize: '14px',
             color: palette.primary.light,
             fontFamily: "'Noto Serif JP', serif",
           }}
@@ -99,17 +95,14 @@ export function AttendanceForm() {
           <Typography
             component="span"
             sx={{
-              fontSize: "20px",
-              textDecoration: "underline",
+              fontSize: '20px',
+              textDecoration: 'underline',
               fontFamily: "'Noto Serif JP', serif",
             }}
           >
             2025年5月31日（土）
           </Typography>
-          <Typography
-            component="span"
-            sx={{ fontFamily: "'Noto Serif JP', serif" }}
-          >
+          <Typography component="span" sx={{ fontFamily: "'Noto Serif JP', serif" }}>
             迄に
           </Typography>
           <br />
@@ -119,8 +112,8 @@ export function AttendanceForm() {
       <Box
         sx={{
           border: `1px solid ${palette.text.primary}`,
-          marginTop: "10px",
-          padding: "8px",
+          marginTop: '10px',
+          padding: '8px',
         }}
       >
         <Typography variant="S">
@@ -128,36 +121,35 @@ export function AttendanceForm() {
         </Typography>
       </Box>
       <InvitaionBox boxTitle="挙式" disableBorder>
-        <Stack direction="row" sx={{ width: "100%" }}>
-          {options.map((option) => (
+        <Stack direction="row" sx={{ width: '100%' }}>
+          {options.map(option => (
             <Box
               key={option.value}
               onClick={() => setSelected(option.value)}
               sx={{
-                position: "relative",
-                cursor: "pointer",
-                width: "100px",
-                height: "100px",
-                overflow: "visible",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                position: 'relative',
+                cursor: 'pointer',
+                width: '100px',
+                height: '100px',
+                overflow: 'visible',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 fontWeight: selected === option.value ? 700 : 400,
-                color: selected === option.value ? "white" : "black",
-                transition: "color 0.1s ease",
+                color: selected === option.value ? 'white' : 'black',
+                transition: 'color 0.1s ease',
               }}
             >
               {/* 背景アニメーション部分 */}
               <Box
                 sx={{
-                  position: "absolute",
+                  position: 'absolute',
                   inset: 0,
                   backgroundImage: `url(${attend})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  transition: "transform 0.2s ease, opacity 0.2s ease",
-                  transform:
-                    selected === option.value ? "scale(1)" : "scale(0.5)",
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  transition: 'transform 0.2s ease, opacity 0.2s ease',
+                  transform: selected === option.value ? 'scale(1)' : 'scale(0.5)',
                   opacity: selected === option.value ? 1 : 0,
                   zIndex: 0,
                 }}
@@ -168,8 +160,8 @@ export function AttendanceForm() {
                 component="p"
                 sx={{
                   zIndex: 1,
-                  position: "relative",
-                  fontSize: "16px",
+                  position: 'relative',
+                  fontSize: '16px',
                 }}
               >
                 {option.label}
@@ -184,7 +176,7 @@ export function AttendanceForm() {
       <Box
         sx={{
           backgroundColor: palette.primary.light,
-          padding: "30px 20px 34px",
+          padding: '30px 20px 34px',
         }}
       >
         <Box>
@@ -195,16 +187,8 @@ export function AttendanceForm() {
           <Typography>いずれかをお選びください＊</Typography>
           <FormControl>
             <RadioGroup value={guestValue} onChange={handleChangeGuestValue}>
-              <FormControlLabel
-                value="guestOfMale"
-                label="新郎ゲスト"
-                control={<Radio />}
-              />
-              <FormControlLabel
-                value="guestOfFemale"
-                label="新婦ゲスト"
-                control={<Radio />}
-              />
+              <FormControlLabel value="guestOfMale" label="新郎ゲスト" control={<Radio />} />
+              <FormControlLabel value="guestOfFemale" label="新婦ゲスト" control={<Radio />} />
             </RadioGroup>
           </FormControl>
         </Box>
@@ -233,15 +217,13 @@ export function AttendanceForm() {
           <Typography>間柄</Typography>
           <FormControl fullWidth>
             <InputLabel>間柄を選択してください</InputLabel>
-            <Select label="aiueo" sx={{ width: "100%" }} />
+            <Select label="aiueo" sx={{ width: '100%' }} />
           </FormControl>
         </Box>
         <Divider />
         <Box>
           <Typography>プロフィール写真</Typography>
-          <Typography>
-            よろしければプロフィール写真の添付をお願いいたします
-          </Typography>
+          <Typography>よろしければプロフィール写真の添付をお願いいたします</Typography>
           <Input type="file" hidden />
         </Box>
         <Divider />
@@ -260,7 +242,7 @@ export function AttendanceForm() {
           <Typography>都道府県</Typography>
           <FormControl fullWidth>
             <InputLabel>東京都</InputLabel>
-            <Select label="aiueo" sx={{ width: "100%" }} />
+            <Select label="aiueo" sx={{ width: '100%' }} />
           </FormControl>
         </Box>
         <Box>
@@ -299,20 +281,9 @@ export function AttendanceForm() {
         <Box>
           <Typography>アレルギーについて</Typography>
           <FormControl>
-            <RadioGroup
-              value={allergyValue}
-              onChange={handleChangeallergyValue}
-            >
-              <FormControlLabel
-                value="noAllergy"
-                label="アレルギーなし"
-                control={<Radio />}
-              />
-              <FormControlLabel
-                value="hasAllergy"
-                label="アレルギーあり"
-                control={<Radio />}
-              />
+            <RadioGroup value={allergyValue} onChange={handleChangeallergyValue}>
+              <FormControlLabel value="noAllergy" label="アレルギーなし" control={<Radio />} />
+              <FormControlLabel value="hasAllergy" label="アレルギーあり" control={<Radio />} />
             </RadioGroup>
           </FormControl>
         </Box>
@@ -320,10 +291,7 @@ export function AttendanceForm() {
         <Box>
           <Typography>お祝い画像・動画</Typography>
           <FormControl>
-            <RadioGroup
-              value={celebrateValue}
-              onChange={handleChangeCelebrateValue}
-            >
+            <RadioGroup value={celebrateValue} onChange={handleChangeCelebrateValue}>
               <FormControlLabel
                 value="listChoice"
                 label="お祝い画像一覧から選ぶ"
@@ -349,20 +317,9 @@ export function AttendanceForm() {
           <Typography>送迎バスのご利用について</Typography>
           <Typography></Typography>
           <FormControl>
-            <RadioGroup
-              value={rideBusValue}
-              onChange={handleChangerideBusValue}
-            >
-              <FormControlLabel
-                value="rideValue"
-                label="利用する"
-                control={<Radio />}
-              />
-              <FormControlLabel
-                value="NoRideValue"
-                label="利用しない"
-                control={<Radio />}
-              />
+            <RadioGroup value={rideBusValue} onChange={handleChangerideBusValue}>
+              <FormControlLabel value="rideValue" label="利用する" control={<Radio />} />
+              <FormControlLabel value="NoRideValue" label="利用しない" control={<Radio />} />
             </RadioGroup>
           </FormControl>
         </Box>
