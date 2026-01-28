@@ -1,12 +1,19 @@
 import './App.css';
-import { Box } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import { LeftContents } from './components/LeftContents';
 import { RightContents } from './components/RightContents';
+import { MobileContents } from './components/mobile/MobileContents';
 
 function App() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <>
-      {/* 全体のdiv */}
+      { isMobile ? (
+        <MobileContents />
+      ) : (
+      // {/* 全体のdiv */}
       <Box
         sx={{
           display: 'flex',
@@ -26,6 +33,9 @@ function App() {
         {/* 右側のdiv（メインコンテンツ部） */}
         <RightContents />
       </Box>
+      )
+
+      }
     </>
   );
 }
