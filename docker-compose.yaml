@@ -6,6 +6,7 @@ services:
     ports:
       - "5173:5173"
     volumes:
-      - .:/app:delegated # コードだけ同期
+      - .:/app # コードだけ同期
+      - /app/node_modules # node_modulesをコンテナ内専用に保持
     stdin_open: true
     tty: true
