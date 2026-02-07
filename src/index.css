@@ -29,7 +29,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  /* min-width: 320px; */
   min-width: 100vw;
   min-height: 100vh;
   background-color: white;
@@ -81,7 +80,7 @@ button:focus-visible {
 
 @font-face {
   font-family: 'Operetta 18';
-  src: url('./assets/fonts/Operetta18-Regular.ttf') format('ttf');
+  src: url('./assets/fonts/Operetta18-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

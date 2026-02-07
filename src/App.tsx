@@ -10,32 +10,30 @@ function App() {
 
   return (
     <>
-      { isMobile ? (
+      {isMobile ? (
         <MobileContents />
       ) : (
-      // {/* 全体のdiv */}
-      <Box
-        sx={{
-          display: 'flex',
-          width: '100%',
-          maxWidth: '848px',
-          height: '100%',
-          // maxHeight: "680px",
-          margin: '0 auto',
-          position: 'relative',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        {/* 左側のdiv */}
-        <LeftContents />
+        // {/* 全体のdiv */}
+        <Box
+          sx={{
+            display: 'flex',
+            width: '100%',
+            maxWidth: '848px',
+            height: '100%',
+            // maxHeight: "680px",
+            margin: '0 auto',
+            position: 'relative',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          {/* 左側のdiv */}
+          <LeftContents />
 
-        {/* 右側のdiv（メインコンテンツ部） */}
-        <RightContents />
-      </Box>
-      )
-
-      }
+          {/* 右側のdiv（メインコンテンツ部） */}
+          <RightContents />
+        </Box>
+      )}
     </>
   );
 }

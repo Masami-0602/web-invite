@@ -5,13 +5,12 @@ export function PartyInvitaion() {
   const { palette } = useTheme();
 
   return (
-    <Box
+    <Stack
       sx={{
         backgroundColor: palette.secondary.light,
         width: '100%',
         height: 'auto',
-        py: '40px',
-        px: '20px',
+        padding: '40px 20px',
       }}
     >
       <Typography variant="weddingTitle">Party Information</Typography>
@@ -91,6 +90,6 @@ export function PartyInvitaion() {
           </Stack>
         </InvitaionBox>
       </Stack>
-    </Box>
+    </Stack>
   );
 }

@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import profile_1 from '../assets/profile_1.png';
 import profile_2 from '../assets/profile_2.png';
 import groom from '../assets/groom.jpeg';
@@ -6,7 +6,7 @@ import bride from '../assets/bride.jpeg';
 
 export function Profile() {
   return (
-    <>
+    <Stack sx={{ alignItems: 'center' }}>
       <Box>
         <Typography variant="weddingTitle">Profile</Typography>
         <Typography sx={{ fontSize: '14px' }}>プロフィール</Typography>
@@ -39,29 +39,16 @@ export function Profile() {
           }}
         />
       </Box>
-      <Box sx={{ mb: '30px' }}>
+      <Stack sx={{ mb: '30px', alignItems: 'center' }}>
         <Typography>新郎</Typography>
-        <Typography
-          sx={{
-            fontSize: '20px',
-            fontWeight: 600,
-            pb: '10px',
-          }}
-        >
-          鬼澤 大地
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: '14px',
-            whiteSpace: 'pre-line',
-          }}
-        >
+        <Typography sx={{ fontSize: '20px', fontWeight: 600, pb: '10px' }}>鬼澤 大地</Typography>
+        <Typography variant="S" sx={{ whiteSpace: 'pre-line', textAlign: 'center' }}>
           {`これからも2人で
             力を合わせて歩んでいきます
             今後ともよろしくお願いいたします
             当日は一緒に楽しみましょう🥂`}
         </Typography>
-      </Box>
+      </Stack>
 
       <Box
         sx={{
@@ -88,7 +75,7 @@ export function Profile() {
           }}
         />
       </Box>
-      <Box sx={{ mb: '30px' }}>
+      <Stack sx={{ mb: '30px', alignItems: 'center' }}>
         <Typography>新婦</Typography>
         <Typography
           sx={{
@@ -104,6 +91,7 @@ export function Profile() {
             fontSize: '14px',
             whiteSpace: 'pre-line',
             lineHeight: '180%',
+            textAlign: 'center',
           }}
         >
           {`大切な皆様と
@@ -111,7 +99,7 @@ export function Profile() {
             美味しい料理と飲み物をご用意して
             お待ちしています！`}
         </Typography>
-      </Box>
-    </>
+      </Stack>
+    </Stack>
   );
 }

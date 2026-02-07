@@ -1,14 +1,19 @@
-import { Box } from "@mui/material";
-import { MainCover } from "../MainCover";
+import { MainCover } from '../MainCover';
+import { CountDown } from '../CountDown';
+import { Greeting } from '../Greeting';
+import { Profile } from '../Profile';
+import { Album } from '../Album';
+import { PartyInvitaion } from '../PartyInvitaion';
 
 export function MobileContents() {
-    return (
-        <Box
-            sx={{
-                width: "100%",
-
-            }}>
-            <MainCover />
-        </Box>
-    )
+  return (
+    <>
+      <MainCover />
+      <CountDown />
+      <Greeting />
+      <Profile />
+      <Album />
+      <PartyInvitaion />
+    </>
+  );
 }

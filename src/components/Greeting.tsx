@@ -1,20 +1,20 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import up_them from '../assets/up_them.jpeg';
 
 export function Greeting() {
   return (
-    <>
-      <Box>
-        <Typography variant="weddingTitle">Message</Typography>
-        <Typography sx={{ fontSize: '14px' }}>ご挨拶</Typography>
-        <Typography
-          sx={{
-            fontSize: '14px',
-            whiteSpace: 'pre-line',
-            paddingTop: '30px',
-          }}
-        >
-          {`春光を浴びて
+    <Stack sx={{ alignItems: 'center' }}>
+      <Typography variant="weddingTitle">Message</Typography>
+      <Typography sx={{ fontSize: '14px' }}>ご挨拶</Typography>
+      <Typography
+        sx={{
+          fontSize: '14px',
+          whiteSpace: 'pre-line',
+          paddingTop: '30px',
+          textAlign: 'center',
+        }}
+      >
+        {`春光を浴びて
             新緑ひときわ鮮やかな季節となりました
 
             皆様におかれましては
@@ -30,8 +30,7 @@ export function Greeting() {
             ご多用中誠に恐縮ではございますが
             ご来臨の栄を賜りたく
             謹んでご案内申し上げます`}
-        </Typography>
-      </Box>
+      </Typography>
       {/* 新郎新婦の写真 */}
       <Box sx={{ padding: '30px 20px' }}>
         <img
@@ -47,6 +46,6 @@ export function Greeting() {
           }}
         />
       </Box>
-    </>
+    </Stack>
   );
 }
