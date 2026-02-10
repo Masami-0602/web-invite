@@ -64,12 +64,13 @@ export function AttendanceForm() {
   };
 
   return (
-    <Box
+    <Stack
       sx={{
         backgroundColor: palette.secondary.dark,
         width: '100%',
         height: 'auto',
         padding: '56px 20px 20px',
+        alignItems: 'center',
       }}
     >
       <Typography variant="weddingTitle" sx={{ color: palette.primary.light }}>
@@ -81,6 +82,7 @@ export function AttendanceForm() {
       <Box
         sx={{
           marginTop: '20px',
+          textAlign: 'center',
         }}
       >
         <Typography
@@ -114,6 +116,7 @@ export function AttendanceForm() {
           border: `1px solid ${palette.text.primary}`,
           marginTop: '10px',
           padding: '8px',
+          textAlign: 'center',
         }}
       >
         <Typography variant="S">
@@ -323,7 +326,19 @@ export function AttendanceForm() {
             </RadioGroup>
           </FormControl>
         </Box>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: '#CCCCCC',
+            borderRadius: '40px',
+            width: '100%',
+            margin: '34px auto 24px',
+            padding: '19px 15px',
+          }}
+        >
+          確認画面へ
+        </Button>
       </Box>
-    </Box>
+    </Stack>
   );
 }

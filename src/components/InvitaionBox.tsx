@@ -1,57 +1,46 @@
-import { useTheme } from '@mui/material';
+import { Divider, useTheme, type SxProps, type Theme, type TypographyProps } from '@mui/material';
 import { Box, Typography } from '@mui/material';
 import type React from 'react';
 
 export type InvitationBoxProps = {
   boxTitle: string;
-  disableHyphen?: boolean;
   disableBorder?: boolean;
+  disableHyphen?: boolean;
   children: React.ReactNode;
+  titleTypographyProps?: TypographyProps;
 };
 
 export function InvitaionBox({
   boxTitle,
-  disableHyphen = false,
   disableBorder = false,
+  disableHyphen = false,
   children,
+  titleTypographyProps,
 }: InvitationBoxProps) {
   const { palette } = useTheme();
-
-  const hyphenProperties = {
-    content: '""',
-    height: '1px',
-    flexGrow: 1,
-    backgroundColor: 'black',
-  };
 
   return (
     <Box
       sx={{
-        border: disableBorder ? {} : `1px solid ${palette.text.primary}`,
-        // mx: "20px",
-        // maxWidth: "calc(100% - 16px)",
+        border: disableBorder ? undefined : `1px solid ${palette.text.primary}`,
         width: '100%',
         boxSizing: 'border-box',
       }}
     >
       <Box sx={{ padding: '16px 20px 24px' }}>
-        <Typography
-          variant="invitationTitle"
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            ...(disableHyphen
-              ? {}
-              : {
-                  '&::before, &::after': { ...hyphenProperties },
-                  '&::before': { mr: '12px' },
-                  '&::after': { ml: '12px' },
-                }),
-          }}
-        >
-          {boxTitle}
-        </Typography>
+        {disableHyphen ? (
+          <Typography {...titleTypographyProps}>{boxTitle}</Typography>
+        ) : (
+          <Divider
+            sx={{
+              '&::before, &::after': {
+                backgroundColor: palette.primary.main,
+              },
+            }}
+          >
+            <Typography {...titleTypographyProps}>{boxTitle}</Typography>
+          </Divider>
+        )}
         {children}
       </Box>
     </Box>

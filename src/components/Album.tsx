@@ -43,8 +43,8 @@ export function Album() {
   ];
 
   return (
-    <Stack sx={{ width: '100%', height: '100%', padding: '30px 0 50px', alignItems: 'center' }}>
-      <Typography variant="weddingTitle">Album</Typography>
+    <Stack sx={{ width: '100%', height: 'auto', padding: '30px 0 50px', alignItems: 'center' }}>
+      <Typography variant="weddingTitleMobile">Album</Typography>
       <Typography sx={{ fontSize: '14px', mb: '36px' }}>アルバム</Typography>
       <ImageGallery
         items={images} // 表示する写真

@@ -11,16 +11,19 @@ export function PartyInvitaion() {
         width: '100%',
         height: 'auto',
         padding: '40px 20px',
+        textAlign: 'center',
       }}
     >
-      <Typography variant="weddingTitle">Party Information</Typography>
+      <Typography noWrap variant="weddingTitle" sx={{ fontSize: '35px', overflow: 'visible' }}>
+        Party Information
+      </Typography>
       <Typography sx={{ fontSize: '14px' }}>パーティのご案内</Typography>
-      <Box>
+      <Box sx={{ textAlign: 'center' }}>
         <Typography>開催日</Typography>
         <Typography>2025年6月22日 日曜日</Typography>
       </Box>
       <Stack sx={{ gap: '14px' }}>
-        <InvitaionBox boxTitle="挙式">
+        <InvitaionBox boxTitle="挙式" titleTypographyProps={{ variant: 'L' }}>
           <Box
             sx={{
               display: 'flex',
@@ -50,7 +53,7 @@ export function PartyInvitaion() {
             <Typography sx={{ display: 'flex' }}>9:15</Typography>
           </Box>
         </InvitaionBox>
-        <InvitaionBox boxTitle="披露宴">
+        <InvitaionBox boxTitle="披露宴" titleTypographyProps={{ variant: 'L' }}>
           <Box
             sx={{
               display: 'flex',
@@ -67,7 +70,7 @@ export function PartyInvitaion() {
             </Typography>
           </Box>
         </InvitaionBox>
-        <InvitaionBox boxTitle="披露宴">
+        <InvitaionBox boxTitle="披露宴" titleTypographyProps={{ variant: 'L' }}>
           <Stack spacing="12px">
             <Typography variant="L" component="p">
               リストランテASO
@@ -79,8 +82,8 @@ export function PartyInvitaion() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d12968.63389738174!2d139.699289!3d35.648467!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO95riL6LC35Yy654y_5qW955S6MjktMyDjg6rjgrnjg4jjg6njg7Pjg4ZBU08!5e0!3m2!1sja!2sus!4v1761971482659!5m2!1sja!2sus"
               style={{
-                width: '278px',
-                height: '210px',
+                width: '100%',
+                height: '100%',
                 border: 'none',
               }}
               allowFullScreen={true}

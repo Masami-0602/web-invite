@@ -4,6 +4,8 @@ import { Greeting } from '../Greeting';
 import { Profile } from '../Profile';
 import { Album } from '../Album';
 import { PartyInvitaion } from '../PartyInvitaion';
+import { AttendanceForm } from '../AttendanceForm';
+import Information from '../Information';
 
 export function MobileContents() {
   return (
@@ -14,6 +16,8 @@ export function MobileContents() {
       <Profile />
       <Album />
       <PartyInvitaion />
+      <Information />
+      <AttendanceForm />
     </>
   );
 }

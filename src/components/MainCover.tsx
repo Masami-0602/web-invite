@@ -17,7 +17,9 @@ export function MainCover() {
       }}
     >
       <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
-        <Typography variant="weddingTitle">Wedding Invitation</Typography>
+        <Typography noWrap variant="weddingTitle" sx={{ fontSize: '35px' }}>
+          Wedding Invitation
+        </Typography>
         <Typography variant="operetta18" sx={{ whiteSpace: 'pre-line' }}>
           {`Daich&Miho\n2025.6.22`}
         </Typography>

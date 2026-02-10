@@ -1,8 +1,10 @@
-import { Box, Divider, Stack, Typography } from '@mui/material';
+import { Box, Divider, Stack, Typography, useTheme } from '@mui/material';
 import countDown_bg from '../assets/countDown_bg.png';
 import { useCountDown } from '../hooks/useCountDown';
 
 export function CountDown() {
+  const { palette } = useTheme();
+
   const { days, hours, minutes, seconds } = useCountDown({
     targetDate: '2025-12-30T10:00:00',
   });
@@ -18,10 +20,11 @@ export function CountDown() {
         width: '100%',
         margin: 'auto',
         alignContent: 'center',
+        color: palette.primary.light,
       }}
     >
-      <Stack sx={{ alignItems: 'center' }}>
-        <Typography>Count Down</Typography>
+      <Stack sx={{ alignItems: 'center', gap: '12px' }}>
+        <Typography variant="L">Count Down</Typography>
         <Typography>{days}days</Typography>
         <Stack direction="row">
           <Box sx={{ whiteSpace: 'pre-line', textAlign: 'center' }}>

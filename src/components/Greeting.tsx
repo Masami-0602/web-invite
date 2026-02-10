@@ -10,7 +10,7 @@ export function Greeting() {
         sx={{
           fontSize: '14px',
           whiteSpace: 'pre-line',
-          paddingTop: '30px',
+          padding: '30px 40px 32px',
           textAlign: 'center',
         }}
       >
