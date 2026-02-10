@@ -1,8 +1,10 @@
 import '@mui/material/styles';
+import type React from 'react';
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
     weddingTitle: React.CSSProperties;
+    weddingTitleMobile: React.CSSProperties;
     operetta18: React.CSSProperties;
     invitationTitle: React.CSSProperties;
     XXS: React.CSSProperties;
@@ -16,6 +18,7 @@ declare module '@mui/material/styles' {
 
   interface TypographyVariantsOptions {
     weddingTitle?: React.CSSProperties;
+    weddingTitleMobile: React.CSSProperties;
     operetta18: React.CSSProperties;
     invitationTitle: React.CSSProperties;
     XXS: React.CSSProperties;
@@ -31,6 +34,7 @@ declare module '@mui/material/styles' {
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     weddingTitle: true;
+    weddingTitleMobile: true;
     operetta18: true;
     invitationTitle: true;
     XXS: true;

@@ -8,6 +8,11 @@ export const theme = createTheme({
       fontWeight: 400,
       fontFamily: "'Hafidz', sans-serif",
     },
+    weddingTitleMobile: {
+      fontSize: '45px',
+      fontWeight: 400,
+      fontFamily: "'Hafidz', sans-serif",
+    },
     operetta18: {
       fontFamily: "'Operetta 18', sans-serif",
     },
